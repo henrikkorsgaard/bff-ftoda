@@ -1,10 +1,11 @@
 package main
 
-import ftoda "github.com/henrikkorsgaard/bff-ftoda/internal/ftoda/api"
+import ftoda "github.com/henrikkorsgaard/bff-ftoda/internal/ftoda"
 
 func main() {
-	repo := ftoda.NewFTODAAAPIRepository("oda.ft.dk")
-	repo.GetSag(10)
+	service := ftoda.NewFTODAService()
+	//how do we fuzzy search in this?
+	service.GetLovforslagById(101403)
 }
 
 /**

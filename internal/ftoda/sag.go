@@ -9,8 +9,8 @@ type Sag struct {
 	//NummerPrefix           string `gorm:"column:nummerprefix"`
 	//NummerNumerisk         string `gorm:"column:nummernumerisk"`
 	//NummerPostfix          string `gorm:"column:nummerpostfix"`
-	//Resume                 string
-	//fstemningskonklusion  string `gorm:"column:afstemningskonklusion"`
+	Resume string `json:"resume"`
+	//Afstemningskonklusion  string `gorm:"column:afstemningskonklusion"`
 	//PeriodeId              int
 	//AfgorelsesResultatKode string `gorm:"column:afgorelsesresultatkode"`
 	//Baggrundsmateriale     string
@@ -29,8 +29,8 @@ type Sag struct {
 	//DeltUnderSagId      int
 
 	// Foreign types
-	//Type       string //Table Sagtype
-	//Kategori   string //Table Sagkategori
+	//Type string `json:"sagstype"` //Table Sagtype
+	//Kategori string `json:"sagkategori"` //Table Sagkategori
 	//Status     string //Table Sagsstatus
 	//SagstrinId int    //Table Sagstrin, use-case when identifying sag by sagstrin (relation Afstemning)
 }
