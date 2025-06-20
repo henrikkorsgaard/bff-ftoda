@@ -30,3 +30,6 @@ https://oda.ft.dk/api/Sag?$filter=typeid%20eq%203%20and%20substringof(%27forsvar
 
 
 - Task 2: Map Sag to Vote
+
+
+## Creating the local database should properly focus on getting taxonomies out, e.g. emneord etc.

@@ -1,16 +1,16 @@
 package ftoda
 
 type Sag struct {
-	Id                int    `gorm:"primaryKey" json:"id"`
-	Titel             string `json:"titel"`
-	TitelKort         string `gorm:"column:titelkort" json:"titelkort"`
+	Id    int    `gorm:"primaryKey" json:"id"`
+	Titel string `json:"titel"`
+	//TitelKort         string `gorm:"column:titelkort" json:"titelkort"`
 	Offentlighedskode string `gorm:"column:offentlighedskode"`
 	//Nummer                 string
 	//NummerPrefix           string `gorm:"column:nummerprefix"`
 	//NummerNumerisk         string `gorm:"column:nummernumerisk"`
 	//NummerPostfix          string `gorm:"column:nummerpostfix"`
-	Resume string `json:"resume"`
-	//Afstemningskonklusion  string `gorm:"column:afstemningskonklusion"`
+	Resume                string `json:"resume"`
+	Afstemningskonklusion string `gorm:"column:afstemningskonklusion" json:"afstemningskonklusion"`
 	//PeriodeId              int
 	//AfgorelsesResultatKode string `gorm:"column:afgorelsesresultatkode"`
 	//Baggrundsmateriale     string
@@ -22,7 +22,7 @@ type Sag struct {
 	//AfgorelsesDato      string
 	//Afgorelse           string
 	//RådsmodeDato        string
-	//Lovnummer           string
+	Lovnummer string `gorm:"column:lovnummer" json:"lovnummer"`
 	//LovnummerDato       string
 	//Retsinformationsurl string
 	//FremsatUnderSagId   int

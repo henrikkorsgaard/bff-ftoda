@@ -23,6 +23,8 @@ func newAPIRepository(host string) *apiRepository {
 	}
 }
 
+// TODO: add select as option. This allow us to filter have minimal and full service
+// This will happen when we start consuming the bff with the frontend elements.
 type odataQuery struct {
 	entity string
 	filter string

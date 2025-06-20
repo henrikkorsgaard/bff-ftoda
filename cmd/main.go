@@ -1,11 +1,23 @@
 package main
 
-import ftoda "github.com/henrikkorsgaard/bff-ftoda/internal/ftoda"
+import (
+	"fmt"
+	"log"
+	"net/http"
+
+	"github.com/gorilla/mux"
+	"github.com/henrikkorsgaard/bff-ftoda/handlers"
+)
 
 func main() {
-	service := ftoda.NewFTODAService()
-	//how do we fuzzy search in this?
-	service.GetLovforslagById(101403)
+
+	r := mux.NewRouter()
+
+	r.HandleFunc("/lovforslag", handlers.GetLovforslag).Methods("GET")
+	r.HandleFunc("/lovforslag/{id}", handlers.GetLovforslagById).Methods("GET")
+	// Start the server
+	fmt.Println("Server is running on port 8000...")
+	log.Fatal(http.ListenAndServe(":8000", r))
 }
 
 /**
